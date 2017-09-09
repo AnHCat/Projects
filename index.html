@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/template-native-debug.js"></script>
+		<script type="text/html" id="tpl">
+			<h3><%= className %></h3>
+			<ul>
+				<% for(var i=0;i<student.length;i++ ) { %>
+				
+				<li> <%= i+1 %>:<%= student[i] %></li>
+				
+				<% } %>
+			</ul>
+		</script>
+	</head>
+	<body>
+	 <div id="list"></div>
+	 <script type="text/javascript">
+	 	var data={
+	 			className:"二班",
+	 			student:["安","张","王","高","李"]
+	 	}
+	 	var html =template("tpl",data);
+	 	var list=document.getElementById("list");
+	 	list.innerHTML=html;
+	 </script>
+	 
+	</body>
+	
+</html>
